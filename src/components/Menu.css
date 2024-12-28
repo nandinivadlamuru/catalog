@@ -1,0 +1,55 @@
+/* Navbar Styling */
+/* Example of importing Circular Std (if available) */
+@font-face {
+    font-family: 'Circular Std'; /* Name the font */
+    src: url('./fonts/circular-std.ttf') format('truetype'); /* Path to the font file */
+    font-weight: 400;
+    font-style: normal;
+  }
+.navbar {
+    width: 1000px;
+    height: 43px;
+    margin-top: 222px; /* Position the navbar with a top margin of 222px */
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid #EFF1F3;
+    position: relative;
+  }
+  
+  /* Navbar Item Styling */
+  .nav-item {
+    font-family: "Circular Std", sans-serif;
+    font-weight:100;
+    font-size: 18px;
+    line-height: 22.77px;
+    cursor: pointer;
+    display: flex;
+    color:#6F7177;
+    align-items: center;
+    justify-content: center;
+    height: 23px;
+    margin-left: 30px;
+    transition: border-bottom 0.3s ease;
+    padding: 0 15px; /* Adjust padding to avoid overlap and to create space around the text */
+  }
+  
+ 
+ 
+  
+  /* Active Tab Styling */
+  .nav-item.active {
+    border-bottom: 3px solid #4B40EE; 
+    /* Set the size and position relative to the active tab (adjust left as needed) */
+    width: 67px;
+    height: 23px;
+    top: 265px;
+    left: 158px; /* Underline for selected tab */
+  }
+  
+  /* Content Section Styling */
+  .content {
+    padding: 20px;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out; /* Adds a sliding effect */
+  }
+  

@@ -1,0 +1,51 @@
+/* Price.css */
+/* Example of importing Circular Std (if available) */
+@font-face {
+    font-family: 'Circular Std'; /* Name the font */
+    src: url('./fonts/circular-std.ttf') format('truetype'); /* Path to the font file */
+    font-weight: 400;
+    font-style: normal;
+  }
+.price-container {
+    text-align: left;
+    font-family: 'Arial', sans-serif; /* Default font */
+  }
+  .price-main {
+    width: 269px;
+    height: 89px;
+    top: 60px;
+    left: 60px;
+    font-family: 'Circular Std', sans-serif;  /* Applying Circular Std font */
+    font-weight:400;  /* Font weight 400 */
+    font-size: 70px;
+    line-height: 88.56px;
+    position: absolute;  /* Position the element relative to the parent container */
+    display: flex; /* Use flexbox to arrange price and currency */
+    align-items: flex-start; /* Align them at the top */
+    color: #1A243A;
+  }
+  
+  .price-currency {
+    font-family: 'Circular Std', sans-serif; /* Apply Circular Std font */
+    font-weight: 400;
+    font-size: 24px; /* Smaller font size for the currency */
+    color: #BDBEBF; /* Gray color for the currency */
+    margin-left: 8px; /* Add some space between the price and the currency */
+    align-self: flex-start; /* Align currency to the top of the price */
+  }
+  
+  
+  .price-change {
+    width: 141px;
+    height: 23px;
+    top: 159px;
+    left: 60px;
+    font-family: 'Circular Std', sans-serif; /* Circular Std font */
+    font-weight: 400; /* Regular weight */
+    font-size: 18px;
+    line-height: 22.77px;
+    position: absolute; /* Position the element relative to its nearest positioned ancestor */
+    color: #67BF6B; /* Green color for price change */
+    margin-top: 0.5rem;
+  }
+  
