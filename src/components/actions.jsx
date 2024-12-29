@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Maximize2, CirclePlus } from 'lucide-react';
 import './Actions.css'; // Optional: Link your CSS file for styling
 
 const Actions = ({ onFullScreen, onTimeRangeChange, onCompare }) => {
@@ -15,12 +16,12 @@ const Actions = ({ onFullScreen, onTimeRangeChange, onCompare }) => {
     <div className="actions-container">
       {/* Fullscreen button */}
       <button onClick={onFullScreen} className="action-button">
-        <span className="icon">↔</span> Fullscreen
+        <Maximize2 className='icon'/> Fullscreen
       </button>
 
       {/* Compare button */}
       <button onClick={onCompare} className="action-button">
-        <span className="icon">➕</span> Compare
+        <CirclePlus /> Compare
       </button>
 
       {/* Time range selectors */}
