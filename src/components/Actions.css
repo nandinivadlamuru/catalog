@@ -24,9 +24,9 @@
     justify-content: center;
   }
   
-  .action-button:hover {
+  /* .action-button:hover {
     background-color: #ddd;
-  }
+  } */
   
   .icon {
     width: 24px;
