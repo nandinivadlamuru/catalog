@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Menu.css";  // Import the CSS file
 import Chart from "./chart.jsx";
 import FinancialChart from "./chart.jsx";
+import Actions from "./actions";
 const Menu = () => {
   const [selectedTab, setSelectedTab] = useState("Summary");
 
@@ -27,7 +28,7 @@ const Menu = () => {
       {/* Content below Navbar */}
       <div className="content">
         {selectedTab === "Summary" && <div>Summary Content</div>}
-        {selectedTab === "Chart" && <div><FinancialChart /></div>}
+        {selectedTab === "Chart" && <div><Actions/><FinancialChart /></div>}
         {selectedTab === "Statistics" && <div>Statistics Content</div>}
         {selectedTab === "Analysis" && <div>Analysis Content</div>}
         {selectedTab === "Settings" && <div>Settings Content</div>}

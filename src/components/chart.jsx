@@ -82,12 +82,16 @@ export default function FinancialChart() {
                             dataKey="date"
                             axisLine={false}
                             tickLine={false}
-                            tick={{ fill: '#64748B', fontSize: 12 }}
+                            // tick={{ fill: '#64748B', fontSize: 12 }}
+                            tick={false} // Hide tick labels
+
                         />
                         <YAxis
                             axisLine={false}
                             tickLine={false}
-                            tick={{ fill: '#64748B', fontSize: 12 }}
+                            tick={false} // Hide tick labels
+
+                            // tick={{ fill: '#64748B', fontSize: 12 }}
                         />
                         <Tooltip
                             content={({ active, payload }) => {
