@@ -39,11 +39,9 @@
   /* Active Tab Styling */
   .nav-item.active {
     border-bottom: 3px solid #4B40EE; 
-    /* Set the size and position relative to the active tab (adjust left as needed) */
     width: 67px;
     height: 23px;
     top: 265px;
-    left: 158px; /* Underline for selected tab */
   }
   
   /* Content Section Styling */

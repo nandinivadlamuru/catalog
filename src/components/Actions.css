@@ -1,0 +1,60 @@
+.actions-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 750px; /* Updated width */
+    height: 33px; /* Updated height */
+    position: absolute; /* Added position for top and left alignment */
+    top: 325px; /* Updated top position */
+    left: 60px; /* Updated left position */
+    padding: 10px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .action-button {
+    padding: 8px 12px;
+    margin-right: 10px;
+    background-color: #efefef;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .action-button:hover {
+    background-color: #ddd;
+  }
+  
+  .icon {
+    margin-right: 5px;
+    font-weight: bold;
+  }
+  
+  .time-range-buttons {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .time-button {
+    padding: 8px 14px;
+    background-color: #efefef;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .time-button.selected {
+    background-color: #4f46e5; /* Highlight selected button */
+    color: #fff;
+    border-color: #4f46e5;
+  }
+  
+  .time-button:hover {
+    background-color: #ddd;
+  }
+  
