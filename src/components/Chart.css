@@ -31,7 +31,7 @@
 }
 
 .financial-chart-badge-current {
-  background-color: #4B40EE;
+  background-color: #ffff;
 }
 
 .financial-chart-badge-container {
@@ -42,7 +42,6 @@
 .financial-chart {
   height: 343px;
   width: 100%;
-  border: 2px solid rgba(55, 55, 55, 0.158);
   border-top: none;
 }
 
@@ -56,6 +55,6 @@
 
 .financial-chart-tooltip-text {
   font-size: 0.875rem;
-  color: #4B40EE;
+  color: #fff;
 }
 
