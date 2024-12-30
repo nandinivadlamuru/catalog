@@ -1,9 +1,7 @@
 .financial-chart-container {
-  width: 100%;
+  width: 839px;
   background-color: white;
   border-radius: 0.5rem;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .financial-chart-content {
@@ -41,8 +39,10 @@
 }
 
 .financial-chart {
-  height: 400px;
+  height: 343px;
   width: 100%;
+  border: 2px solid rgba(55, 55, 55, 0.158);
+  border-top: none;
 }
 
 .financial-chart-tooltip {
@@ -57,3 +57,4 @@
   font-size: 0.875rem;
   color: #4B5563;
 }
+
