@@ -2,8 +2,6 @@
   width: 100%;
   background-color: white;
   border-radius: 0.5rem;
-  /* border: 1px solid #e5e7eb; */
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .financial-chart-content {
@@ -55,5 +53,5 @@
 
 .financial-chart-tooltip-text {
   font-size: 0.875rem;
-  color: #4B5563;
+  color: #4B40EE;
 }

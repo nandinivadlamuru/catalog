@@ -2,6 +2,10 @@
 import React from 'react';
 import { Line, Bar, ComposedChart, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 import './Chart.css';
+import { ReferenceLine, Label } from 'recharts';
+
+
+
 
 const FinancialChart = ({ data }) => {
   const values = data.map(d => d.value);
@@ -36,11 +40,13 @@ const FinancialChart = ({ data }) => {
             </defs>
             <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E2E8F0" />
             <XAxis dataKey="date" axisLine={false} tickLine={false} tick={false} />
+            <CartesianGrid vertical={true} />
+
             <YAxis
               axisLine={false}
               tickLine={false}
               tick={false}
-              domain={[minValue, maxValue]}
+              domain={[minValue-1000, maxValue+1000]}
               allowDataOverflow={true}
             />
             <Tooltip
@@ -57,11 +63,13 @@ const FinancialChart = ({ data }) => {
                 return null;
               }}
             />
+
+
             <Bar dataKey="volume" fill="#E2E8F0" barSize={20} isAnimationActive={false} />
             <Line
               type="Linear"
               dataKey="value"
-              stroke="#7C3AED"
+              stroke="#4B40EE"
               strokeWidth={2}
               dot={false}
               isAnimationActive={false}

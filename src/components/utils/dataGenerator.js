@@ -13,7 +13,7 @@ export const generateRandomData = (timeRange) => {
         startDate = new Date(now.setDate(now.getDate() - 1));
         break;
       case '3d':
-        numberOfPoints = 72; // 3 days
+        numberOfPoints = 30; // 3 days
         valueRange = [60000, 70000];
         startDate = new Date(now.setDate(now.getDate() - 3));
         break;
