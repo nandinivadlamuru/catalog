@@ -1,5 +1,4 @@
-// Menu.jsx
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import './Menu.css';
 import FinancialChart from './chart.jsx';
 import Actions from './actions';
@@ -8,7 +7,9 @@ import { generateRandomData } from './utils/dataGenerator';
 const Menu = () => {
   const [selectedTab, setSelectedTab] = useState('Summary');
   const [timeRange, setTimeRange] = useState('1w');
-  const [chartData, setChartData] = useState(generateRandomData('1w'));
+
+  // Memoize chart data based on timeRange
+  const chartData = useMemo(() => generateRandomData(timeRange), [timeRange]);
 
   const handleTabClick = (tab) => {
     setSelectedTab(tab);
@@ -16,7 +17,6 @@ const Menu = () => {
 
   const handleTimeRangeChange = (range) => {
     setTimeRange(range);
-    setChartData(generateRandomData(range));
   };
 
   return (
@@ -50,3 +50,4 @@ const Menu = () => {
 };
 
 export default Menu;
+
