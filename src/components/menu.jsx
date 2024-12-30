@@ -18,7 +18,14 @@ const Menu = () => {
   const handleTimeRangeChange = (range) => {
     setTimeRange(range);
   };
+  const [isFullScreen, setIsFullScreen] = useState(false);
 
+  const handleFullScreenToggle = () => {
+    setIsFullScreen(!isFullScreen);
+  };
+  
+
+  
   return (
     <div>
       <div className="navbar">
@@ -37,8 +44,9 @@ const Menu = () => {
         {selectedTab === 'Summary' && <div>Summary Content</div>}
         {selectedTab === 'Chart' && (
           <div>
-            <Actions onTimeRangeChange={handleTimeRangeChange} />
-            <FinancialChart data={chartData} />
+    
+  <Actions onFullScreen={handleFullScreenToggle} onTimeRangeChange={handleTimeRangeChange} isFullScreen={isFullScreen} />
+  <FinancialChart data={chartData} isFullScreen={isFullScreen} />
           </div>
         )}
         {selectedTab === 'Statistics' && <div>Statistics Content</div>}
