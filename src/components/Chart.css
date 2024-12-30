@@ -6,6 +6,7 @@
 
 .financial-chart-content {
   padding: 1.5rem;
+  padding-left: 0rem;
 }
 
 .financial-chart-header {
@@ -30,7 +31,7 @@
 }
 
 .financial-chart-badge-current {
-  background-color: #7C3AED;
+  background-color: #4B40EE;
 }
 
 .financial-chart-badge-container {
@@ -55,6 +56,6 @@
 
 .financial-chart-tooltip-text {
   font-size: 0.875rem;
-  color: #4B5563;
+  color: #4B40EE;
 }
 
