@@ -1,4 +1,3 @@
-// utils/dataGenerator.js
 let cachedData = {};
 
 export const generateRandomData = (timeRange) => {
@@ -12,41 +11,49 @@ export const generateRandomData = (timeRange) => {
   let startDate;
   let numberOfPoints;
   let valueRange;
+  let volumeRange;
 
   switch (timeRange) {
     case '1d':
       numberOfPoints = 24; // 24 hours
       valueRange = [60000, 70000];
+      volumeRange = [1000, 1500]; // Adjust volume range if needed
       startDate = new Date(now.setDate(now.getDate() - 1));
       break;
     case '3d':
       numberOfPoints = 30; // 3 days
       valueRange = [60000, 70000];
+      volumeRange = [1000, 1500];
       startDate = new Date(now.setDate(now.getDate() - 3));
       break;
     case '1w':
       numberOfPoints = 30; // 7 days
       valueRange = [60000, 70000];
+      volumeRange = [1000, 1500];
       startDate = new Date(now.setDate(now.getDate() - 7));
       break;
     case '1m':
       numberOfPoints = 30; // 30 days
       valueRange = [60000, 70000];
+      volumeRange = [1000, 1500];
       startDate = new Date(now.setMonth(now.getMonth() - 1));
       break;
     case '6m':
       numberOfPoints = 40; // 6 months
       valueRange = [50000, 80000];
+      volumeRange = [1500, 2000]; // Adjust volume range for larger data
       startDate = new Date(now.setMonth(now.getMonth() - 6));
       break;
     case '1y':
       numberOfPoints = 45; // 1 year
       valueRange = [40000, 90000];
+      volumeRange = [2000, 2500]; // Adjust volume range for larger data
       startDate = new Date(now.setFullYear(now.getFullYear() - 1));
       break;
     default:
       numberOfPoints = 30;
       valueRange = [60000, 70000];
+      volumeRange = [1000, 1500];
       startDate = new Date(now.setMonth(now.getMonth() - 1));
   }
 
@@ -54,7 +61,7 @@ export const generateRandomData = (timeRange) => {
     const date = new Date(startDate);
     date.setHours(date.getHours() + i);
     const value = Math.random() * (valueRange[1] - valueRange[0]) + valueRange[0];
-    const volume = Math.random() * 1500;
+    const volume = Math.random() * (volumeRange[1] - volumeRange[0]) + volumeRange[0]; // Calculate volume similarly to value
     data.push({
       date: date.toISOString().split('T')[0],
       value: parseFloat(value.toFixed(2)),
@@ -71,3 +78,4 @@ export const generateRandomData = (timeRange) => {
 
   return data;
 };
+
